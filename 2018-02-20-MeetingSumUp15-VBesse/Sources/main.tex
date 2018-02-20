@@ -1,0 +1,159 @@
+\documentclass[12pt,a4paper]{article}
+
+%%% REPORT FOR SPIN WAVES EXCITATION BY ACOUSTIC PULSE
+
+\usepackage{amsmath}               %AMSMath tools for flexible equations
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{cite}
+%\usepackage[margin=1.5cm]{geometry}
+\usepackage{fullpage}   % Texte en pleine page, réduction des marges 
+\usepackage{subfig} % remplace subfigure
+%\usepackage[utf8x]{inputenc} 
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[section]{placeins}
+\usepackage{listings} % in order to include code in a tex file
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+
+
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\DeclareTextSymbol{\degre}{T1}{6}
+
+\newcommand{\valentin}{\textbf{Valentin}}
+\newcommand{\vladimir}{\textbf{Vladimir}}
+\newcommand{\anton}{\textbf{Anton}}
+\newcommand{\alexandr}{\textbf{Alexandr}}
+\newcommand{\vasily}{\textbf{Vasily}}
+\newcommand{\dmitrii}{\textbf{Dmitrii}}
+	
+\begin{document}
+	
+	
+\begin{center}
+	{\bf\Large Meeting Recap~\MakeUppercase{\romannumeral 15}}\\
+	{\bf\Large \today}\\
+	\vspace{0.4cm}
+	{\large Valentin \textsc{Besse}\footnote{Author of the report}, Vladimir \textsc{Vlasov}, Anton \textsc{Golov}, Alexandr \textsc{Alekhin}, Dmitrii \textsc{Kuzmin} and Vasily \textsc{Temnov}}\\
+	\vspace{0.6cm}
+	%{\large \today}
+	%{\large August 28, 2017}
+\end{center}
+\vspace{0.1cm}
+
+\section*{Version}
+
+\begin{itemize}
+    \item February 20, 2018: V1.
+\end{itemize}
+
+\section*{Present at the meeting}
+
+\begin{itemize}
+    \item Valentin \textsc{Besse}.
+    \item Alexandr \textsc{Alekhin}.
+    \item Dmitrii \textsc{Kuzmin}.
+    \item Vasily \textsc{Temnov}.
+    \item Vladimir \textsc{Vlasov}.
+    \item Anton \textsc{Golov}.
+\end{itemize}
+
+\section*{Agenda}
+
+During this meeting we discuss about:
+\begin{enumerate}
+    \item International Symposium Spin Waves that will take place in June (3-8) in St Petersburg. See section \ref{sec1}.
+    \item New simulations done by Anton. These simulations are done setting coefficients ($B_{12}$, $B_{21}$ and $B_{23}$) related to the parametric terms to $0$. See section \ref{sec2}.
+    \item Progress of the PRL draft. See section \ref{sec3}.
+    \item New equation that include a strain dependence in the exchange field. See section \ref{sec4}.
+    %\item .
+\end{enumerate}
+
+\section{International Symposium on Spin Waves}
+\label{sec1}
+We discussed about:
+\begin{itemize}
+    \item \vladimir\ should present something about the magneto switching.
+    \item \valentin\ and \anton\ should present result from the paper. \valentin\ suggests that he may talk about the mechanism while \anton\ may talk about the dynamics that we observed numerically. No decision nor consensus were taken. \textbf{So if you can give your opinion on this, it will help}.
+    \item \vasily\ strongly asked if \valentin\ can have an invited talk. \vladimir\ explained that it may be possible but \vasily\ need to write a recommendation letter.
+    \item Abstracts are due to March $1^{\mathrm{st}}$ (Thursday, next week). \valentin\ suggests the following titles
+    \begin{itemize}
+        \item \valentin\ talk: "Strain dependencies on different mechanism related to magnon generation".
+        \item \anton\ talk; "Numerical study of the generation and propagation of exchange magnons induced by picosecond acoustic pulses".
+    \end{itemize}
+    \valentin\ strongly recommends that you give him some ideas and feedback about this. 
+    Also \valentin\ will write his abstract next Friday.
+\end{itemize}
+
+\section{Simulations with no parametric coefficients}
+\label{sec2}
+
+\anton\ did some simulation by setting the parametric coefficients ($B_{12}$, $B_{21}$ and $B_{23}$) in the equation to $0$.
+These results are presented in a \href{https://www.dropbox.com/s/v2kf5196odk16xt/Comparison\%20wo\%20B-coefs.xlsx?dl=1}{\textbf{Excel file}} (or an \href{https://www.dropbox.com/s/w0yaycigoqlc5ww/Comparison\%20wo\%20B-coefs.ods?dl=1}{\textbf{Open Office Calc file}}).
+\valentin\ find this file difficult to understand due to a lack of explanation.
+\anton\ claimed that the parametric terms does not play a role in the dynamics.
+\anton\ plotted the different situation (\href{https://www.dropbox.com/s/lwe3xghaiqckxjq/plots.zip?dl=1}{\textbf{archive file}}).
+However these plots need to be confront to the same plots with non zero parametric coefficient.
+The two situations should be represented on the same page side-by-side.
+
+\section{Progress of the PRL draft}
+\label{sec3}
+\begin{itemize}
+    \item \vasily, \alexandr, \dmitrii\ and \valentin\ discussed about the paper Monday, February 20th.
+    They decided that they need to consider a new mechanism: strain dependence of the exchange field.
+    In order to have a chance to be published in PRL, the paper should include a comparative study between the magnetoelastic mechanism and the strain dependant exchange field.
+    This will be discuss in detail in the section \ref{sec4}.
+    \item \alexandr\ suggested that we present a study of the impact of strain amplitude on the amplitude of the precession and he want that we present this study in real numbers.
+    We can must use percentage for the strain amplitude and degree for the precession amplitude.
+    \item \valentin\ suggested that we include a small table where we vary the strain amplitude from $0.1\%$ to $0.5\%$.
+\end{itemize}
+
+\section{Strain dependence of the exchange field}
+\label{sec4}
+\dmitrii\ will present a new equation to take into the influence of the strain propagation on the exchange field.
+It will induce local change of the exchange field due to the strain.
+It can take the following form of a Taylor expansion:
+\begin{equation}
+    D = D_0 + \alpha \epsilon_{zz},
+    \label{eq1}    
+\end{equation}
+where $D$ is the exchange coefficient, $D_0$ is constant part of the exchange coefficient, $\alpha$ is the first-order expansion's coefficient and $\epsilon_{zz}$ is the longitudinal strain.
+We have to wait until \dmitrii\ calculate the proper equation to consider.
+
+The idea is to do the simulation by taking into account this new mechanism and by setting the magnetoelastic constant to $0$ and to compare to the same situation with only the magnetoelastic mechanism.
+
+\section{New tasks}
+
+The new tasks are:
+\begin{itemize}
+    \item write the abstract for the International Symposium on Spin Waves.
+    \item calculate the precession angle as a function of the amplitude of the strain (from $0.1\%$ to $0.5\%$).
+    \item add the new mechanism (strain dependence of the exchange field) in the system of equations.
+    \item calculate magnetization dynamics with strain dependence of the exchange field and without magnetoelastic effect and compare with magnetization dynamics without strain dependence of the exchange field and with magnetoelastic effect.
+    This study must be done with other parameters constant !
+    Maybe it will be raisonnable to consider the same value for the other parameters as the one shown in figure 2 of the \href{https://www.dropbox.com/s/a8lzw49004nmdfz/2018_Exchange_Magnon_PaperPRL.pdf?dl=1}{\textbf{PRL paper}}.
+\end{itemize}
+
+\section*{Next meeting}
+
+The next meeting will be \textbf{Thursday February 22th at 10:00 am (CET)}.
+
+\newpage
+
+\section*{List of abbreviations}
+
+\begin{table}[ht]
+    %\centering
+    \begin{tabular}{ l c r }
+        Landau-Lifschitz-Gilbert & $\Longrightarrow$ & LLG \\
+        Ferromagnetic resonance & $\Longrightarrow$ & FMR \\
+    \end{tabular}
+\end{table}
+
+%\bibliographystyle{ieeetr}
+%\bibliography{Exchange_Magnons}
+
+\end{document}
