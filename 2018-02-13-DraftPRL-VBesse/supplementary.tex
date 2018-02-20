@@ -1,0 +1,99 @@
+%\documentclass{report}
+\documentclass[aps,prl,amsmath,amssymb,preprint,superscriptaddress]{revtex4-1}
+\usepackage{graphicx}
+%\usepackage{grffile}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{color}
+
+\begin{document}
+
+\title{Exchange Magnons in Ferromagnetic Films Excited by Picosecond Acoustic Pulses\\ Supplementary Information}
+
+\author{V. Besse}
+\email{valentin.besse@univ-lemans.fr}
+\affiliation{IMMM CNRS 6283, Le Mans Universit\'{e}, 72085 Le Mans cedex, France}
+\author{A.V. Golov}
+\affiliation{Syktyvkar State University named after Pitirim Sorokin, 167001, Syktyvkar, Russia}
+\author{V.S. Vlasov}
+\affiliation{Syktyvkar State University named after Pitirim Sorokin, 167001, Syktyvkar, Russia}
+\author{L.N. Kotov}
+\affiliation{Syktyvkar State University named after Pitirim Sorokin, 167001, Syktyvkar, Russia}
+\author{A. Alekhin}
+\affiliation{IMMM CNRS 6283, Le Mans Universit\'{e}, 72085 Le Mans cedex, France}
+\author{}
+\author{V.V. Temnov}
+\affiliation{IMMM CNRS 6283, Le Mans Universit\'{e}, 72085 Le Mans cedex, France}
+
+\maketitle
+%{\bf SUPPLEMENTAL MATERIAL}
+
+The supplementary information is split in ... sections.
+The first section is dedicated to the calculation of the model we numerically resolve in the main text.
+
+\section{Magnetization dynamics excited by acoustic pulses}
+\label{sec:SI1}
+
+We consider the Landau-Lifschitz-Gilbert equation in the Cartesian coordinate system $\left(x,y,z\right)$
+\begin{equation}
+    \frac{\partial \mathbf{m}}{\partial t} = - \gamma \mu_0 \mathbf{m} \times \mathbf{H}_{eff} + \alpha \mathbf{m} \times \frac{\partial \mathbf{m}}{\partial t},
+    \label{eq:LLG-1}
+\end{equation}
+which describe the magnetization dynamics in a ferromagnetic film, where $\mathbf{m}$ is the unit magnetization vector, $\gamma$ is the gyromagnetic ratio, $\mu_0$ is the vacuum permeability and $\mathbf{H}_{eff}$ is the effective magnetic field.
+It is the functional derivative of the free energy density
+\begin{equation}
+    \mathbf{H}_{eff} = - \frac{1}{\mu_0 M_0} \frac{\partial U}{\partial \mathbf{m}} + \frac{1}{M_0} \sum_{p=1}^{3} \frac{\partial}{\partial x_p} \frac{\partial U}{\partial \left(\frac{\partial  \mathbf{m}}{\partial x_p} \right)},
+    \label{eq:Heff}
+\end{equation}
+where $M_0$ is the magnetic saturation.
+We define the free density energy to be 
+\begin{equation}
+    U = U_{de} + U_{z} + U_{me} + U_{ex},
+    \label{eq:U}
+\end{equation}
+which include the demagnetizing field's energy
+\begin{equation}
+    U_{de} = \frac{1}{2} \mu_0 M_0^2 \mathbf{m} \cdot \mathbf{N} \cdot \mathbf{m},
+    \label{eq:Ude}
+\end{equation}
+the external magnetic field's energy
+\begin{equation}
+    U_z = -\mu_0 M_0 \mathbf{m} \cdot \mathbf{H},
+    \label{eq:Uz}
+\end{equation}
+the magnetoelastic field energy
+\begin{equation}
+    U_{me} = b_1 \sum_{p=1}^3 m_p^2\epsilon_{pp}
+    \label{eq:Ume}
+\end{equation}
+and the exchange magnetic field energy
+\begin{equation}
+    U_{ex} = \frac{1}{2} M_0 \sum_{p=1}^3 D \left( \frac{\partial \mathbf{m}}{\partial x_p} \right)^2.
+    \label{eq:Uex}
+\end{equation}
+The magnetoelastic constant is $b_1$, while the exchange constant is $D$.
+
+We consider the situation shown in the figure 1 of the main text.
+It implies that the unit magnetic vector $\mathbf{m}$ and the external magnetic vector $\mathbf{H}$ are in the plane $\left(x O z\right)$.
+The consequence is that the demagnetization tensor is
+\begin{equation}
+    \mathbf{N} = \begin{pmatrix} 0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & 1
+    \end{pmatrix},
+    \label{eq:N}
+\end{equation}
+and the acoustic strain is
+\begin{equation}
+    \sum_{p=1}^3\epsilon_{pp} = \epsilon_{zz}.
+    \label{eq:epsilon}
+\end{equation}
+
+
+First, we consider that $\alpha = 0$, so we can rewrite \ref{eq:LLG-1}:
+\begin{equation}
+    \frac{\partial \mathbf{m}}{\partial t} = - \gamma \mu_0 \mathbf{m} \times \mathbf{H}_{eff},
+    \label{eq:LLG-2}
+\end{equation}
+%\bibliography{bib_ExchangeMagnons.bib}
+\end{document}
