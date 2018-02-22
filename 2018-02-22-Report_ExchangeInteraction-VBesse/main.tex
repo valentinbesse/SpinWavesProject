@@ -1,0 +1,152 @@
+\documentclass[12pt,a4paper]{article}
+
+%%% REPORT FOR SPIN WAVES EXCITATION BY ACOUSTIC PULSE
+
+\usepackage{amsmath}               %AMSMath tools for flexible equations
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{cite}
+%\usepackage[margin=1.5cm]{geometry}
+\usepackage{fullpage}   % Texte en pleine page, réduction des marges 
+\usepackage{subfig} % remplace subfigure
+%\usepackage[utf8x]{inputenc} 
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[section]{placeins}
+\usepackage{listings} % in order to include code in a tex file
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+
+
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\DeclareTextSymbol{\degre}{T1}{6}
+
+\newcommand{\valentin}{\textbf{Valentin}}
+\newcommand{\vladimir}{\textbf{Vladimir}}
+\newcommand{\anton}{\textbf{Anton}}
+\newcommand{\alexandr}{\textbf{Alexandr}}
+\newcommand{\vasily}{\textbf{Vasily}}
+\newcommand{\dmitrii}{\textbf{Dmitrii}}
+	
+\begin{document}
+	
+	
+\begin{center}
+	{\bf\Large Report : Strain dependence on exchange interaction}\\
+	{\bf\Large \today}\\
+	\vspace{0.4cm}
+	{\large Valentin \textsc{Besse}\footnote{Author of the report}, Vladimir \textsc{Vlasov}, Anton \textsc{Golov}, Alexandr \textsc{Alekhin}, Dmitrii \textsc{Kuzmin} and Vasily \textsc{Temnov}}\\
+	\vspace{0.6cm}
+	%{\large \today}
+	%{\large August 28, 2017}
+\end{center}
+\vspace{0.1cm}
+
+\section*{Version}
+
+\begin{itemize}
+    \item February 22, 2018: V1.
+\end{itemize}
+
+\section{Introduction}
+
+In this report we discuss the strain dependence of the exchange interaction. 
+We present the theory that describe the energy and the field of the exchange interaction (see section \ref{sec1}).
+We introduce the strain dependence on these equations and we predict some results.
+
+We conclude by a proposition of the new tasks regarding this specific interaction.
+
+\section{Theory}
+\label{sec1}
+
+The energy of the exchange interaction in a ferromagnet can be represented by \cite{gurevich1996magnetization}
+\begin{equation}
+    U_{\mathrm{ex}} = U_{\mathrm{ex,0}} + U_{\mathrm{ex,NU}}
+    \label{eq1}
+\end{equation}
+where $U_{\textrm{ex,0}}$ is the exchange energy when the magnetization is uniform and $U_{\textrm{ex,NU}}$ is responsible for the change of the exchange energy when the magnetization is non-uniform.
+The first term of Eq. \eqref{eq1} can be written
+\begin{equation}
+    U_{\mathrm{ex,0}} = \frac{1}{2} \mathbf{M} \overleftrightarrow{\Lambda} \mathbf{M}
+    \label{eq2}
+\end{equation}
+with the magnetization $\mathbf{M}$ and the exchange tensor $\overleftrightarrow{\Lambda}$.
+
+The second term of Eq. \eqref{eq1} can be written
+\begin{equation}
+    U_{\mathrm{ex,NU}} = \frac{1}{2} \sum_{p=1}^3 \sum_{s=1}^3 q_{ps} \frac{\partial \mathbf{M}}{\partial x_p} \frac{\partial \mathbf{M}}{\partial x_s}
+    \label{eq3}
+\end{equation}
+where $q_{ps}$ are the components of a tensor $\overleftrightarrow{q}$.
+
+The effective field is a functional derivative (or variational derivative) of the energy by the magnetization vector
+\begin{equation}
+    H_{\mathbf{eff}} = - \frac{\delta U}{\delta \mathbf{M}} = - \frac{\partial U}{\partial \mathbf{M}} + \sum_{p=1}^3 \frac{\partial}{\partial x_p} \left[ \frac{\partial U}{\partial \left(\partial \mathbf{M} / \partial x_{p} \right)} \right]
+    \label{eq4}
+\end{equation}
+with the total free energy $U$.
+Using Eqs. \eqref{eq3} and \eqref{eq4} we obtain the contribution of the exchange interaction to the effective field
+\begin{equation}
+    \mathbf{H}_{\mathrm{ex}} = \mathbf{H}_{\mathrm{ex,0}} + \mathbf{H}_{\mathrm{ex,NU}} \equiv \overleftrightarrow{\Lambda} \mathbf{M} + \sum_{p=1}^3 \sum_{s=1}^3 q_{ps} \frac{\partial^2 \mathbf{M}}{\partial x_p \partial x_s}
+    \label{eq5}
+\end{equation}
+
+So now, let's consider the case of an isotropic ferromagnet, it implies that $\Lambda$ and $q$ are scalars.
+We write $q = D$.
+We also consider the equation only for the x-direction.
+The Eq. \eqref{eq5} becomes
+\begin{equation}
+    \mathbf{H}_{\mathrm{ex}} = \Lambda \mathbf{M} + D \frac{\partial^2 \mathbf{M}}{\partial x^2}.
+    \label{eq6}
+\end{equation}
+We write the magnetization vector as a Fourier series
+\begin{equation}
+    \mathbf{M} = \mathbf{M}_0 + \sum_{n=0}^N \mathbf{M}_n \left( t \right) \cos \left( k_n x\right)
+    \label{eq7}
+\end{equation}
+where $\mathbf{M}_0$ is the steady states of the magnetization vector, $\mathbf{M}_n$ is the n-th order of the magnetization vector and $k_n$ is the wavevector of the n-th magnetic order.
+It is obvious that $\mathbf{M}_n \ll \mathbf{M}_0$.
+Substitutes Eq. \eqref{eq7} into the non-uniform part of Eq. \eqref{eq6} we obtain 
+\begin{equation}
+    \mathbf{H}_{\mathrm{ex,NU}} =  D \frac{\partial^2 \mathbf{M}}{\partial x} = - D \sum_{n=0}^N k^2_n \mathbf{M}_n^2 \cos \left( k_n x\right).
+    \label{eq8}
+\end{equation}
+
+The lossless Landau-Lifshitz-Gilbert equation is defined by
+\begin{equation}
+    \frac{\partial \mathbf{M}}{\partial t} = - \gamma \mathbf{M} \times \mathbf{H}_{\mathrm{eff}}
+    \label{eq9}
+\end{equation}
+with $\gamma$ is the gyromagnetic ratio.
+We consider only the contribution of the exchange interaction when the magnetization is non-uniform.
+Adding Eq. \eqref{eq8} into Eq. \ref{eq9} we obtain
+\begin{equation}
+    \frac{\partial \mathbf{M}}{\partial t} = - \gamma D \mathbf{M} \times \frac{\partial^2 \mathbf{M}}{\partial x^2}
+    \label{eq10}
+\end{equation}
+Let's consider that $\mathbf{M} \sim \exp \left( i \omega t \right)$ and that the exchange constant $D$ is modified by the propagation of a strain.
+It is easy to imagine that since the distance between two atoms change when a strain is propagating that the exchange interaction.
+It implies that $D \left(t,x\right)$.
+
+
+
+\section{Conclusion}
+
+\newpage
+
+\section*{List of abbreviations}
+
+\begin{table}[ht]
+    %\centering
+    \begin{tabular}{ l c r }
+        Landau-Lifschitz-Gilbert & $\Longrightarrow$ & LLG \\
+        Ferromagnetic resonance & $\Longrightarrow$ & FMR \\
+    \end{tabular}
+\end{table}
+
+\bibliographystyle{ieeetr}
+\bibliography{Exchange_Magnons}
+
+\end{document}

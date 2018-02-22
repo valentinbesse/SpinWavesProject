@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{article}
+
+%%% REPORT FOR SPIN WAVES EXCITATION BY ACOUSTIC PULSE
+
+\usepackage{amsmath}               %AMSMath tools for flexible equations
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{subfig} % remplace subfigure
+%\usepackage[utf8x]{inputenc} 
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[section]{placeins}
+\usepackage{listings} % in order to include code in a tex file
+\usepackage{setspace}
+\usepackage{hyperref}
+\onehalfspacing
+
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\DeclareTextSymbol{\degre}{T1}{6}
+
+\newcommand{\valentin}{\textsc{Valentin} }
+\newcommand{\vladimir}{\textsc{Vladimir} }
+\newcommand{\anton}{\textsc{Anton} }
+\newcommand{\alexandr}{\textsc{Alexandr} }
+\newcommand{\vasily}{\textsc{Vasily} }
+
+	
+\begin{document}
+	
+	
+\begin{center}
+	{\bf\Large Meeting Recap~\MakeUppercase{\romannumeral 13}}\\
+	{\bf\Large \today}\\
+	\vspace{0.4cm}
+	{\large Valentin \textsc{Besse}\footnote{Author of the report}, Vladimir \textsc{Vlasov}, Anton \textsc{Golov}, Alexandr \textsc{Alekhin} and Vasily \textsc{Temnov}}\\
+	\vspace{0.6cm}
+	%{\large \today}
+	%{\large August 28, 2017}
+\end{center}
+\vspace{0.1cm}
+
+\section*{Version}
+
+\begin{itemize}
+    \item September 28, 2017: V1.
+\end{itemize}
+
+\section*{Present at the meeting}
+
+\begin{itemize}
+    \item Valentin \textsc{Besse}.
+    \item Vladimir \textsc{Vlasov}.
+    \item Anton \textsc{Golov}.
+\end{itemize}
+
+\section*{Progress}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    Tasks & Status \\
+    \hline
+    \hline
+    Figures/Tables & Figures are almost done. We use figures from Rome's presentation. \\
+    \hline
+    Summary statements & To be done\\
+    \hline
+    Scientific audience & We target PRL\\
+    \hline
+    Materials and methods & To be done\\
+    \hline
+    Re-evalutate data & To be done\\
+    \hline
+    Results & To be done\\
+    \hline
+    Discussion/Conclusion & To be done\\
+    \hline
+    References & To be done\\
+    \hline
+    Introduction & To be done\\
+    \hline
+    Title & Acousto-magnonic cavity with exchange magnon in the THz regime\\
+    \hline
+    Conclusion paragraph & To be done \\
+    \hline
+    \end{tabular}
+    \caption{Sum up of the tasks and the progress. The tasks' division follows the algorithm describe in Fig. 1 of \cite{o2009algorithm}}
+    \label{tab:my_label}
+\end{table}
+
+\section*{Agenda}
+
+During this meeting we discuss about:
+\begin{enumerate}
+    \item Rome presentation.
+    \item Works to be done.
+    \item Suggestions.
+\end{enumerate}
+
+%The pad used during the meeting can be found \href{https://pad.aumbox.net/mypads/?/mypads/group/exchange-magnons-4m3cvuz/pad/view/2017-09-28-meeting-9857vtq}{here}\footnote{https://pad.aumbox.net/mypads/?/mypads/group/exchange-magnons-4m3cvuz/pad/view/2017-09-28-meeting-9857vtq}.
+
+\section{Works to be done}
+
+\valentin will use the following pictures from Rome's presentation:
+\begin{itemize}
+    \item p.11, a temporal trace but in the case of a sample with 30 nm of thickness.
+    \item p.22, a spectrum with the corresponding dispersion curves but for phase and frequency matching conditions.
+    \item p.26, spectra for phase and frequency matching conditions for different number of acoustic pulses.
+    \item p.30, spectra for phase and frequency matching conditions for different type of acoustic pulses.
+    \item p.36, spectra for phase and frequency matching conditions for different values of the damping.
+\end{itemize}
+
+\section{Suggestions}
+
+\valentin thinks that there is no need of supplementary simulation for the paper at the moment.
+So \valentin suggests that Anton should start to work on simulations:
+\begin{itemize}
+    \item with magnetic anisotropy. Do we have paper about it in nickel ? I found two papers\footnote{\href{http://iopscience.iop.org/article/10.1088/0370-1328/78/1/305/pdf}{Magnetic Anisotropy in Single-crystal Nickel Films}}\footnote{\href{https://link.springer.com/content/pdf/10.1007\%2FBF01106052.pdf}{Magnetic Anisotropy of Nickel Films Produced by Chemical Reduction}}
+    \item or other type of anisotropy.
+    \item or with a varying magnetoelastic effect. Is this realist ? Is there any paper about it ?
+\end{itemize}
+What do you think about it ?
+
+\section*{Next meeting}
+
+The next meeting will be Monday November 6th at 2:00 pm (CET).
+
+\newpage
+
+\section*{List of abbreviations}
+
+\begin{table}[ht]
+    %\centering
+    \begin{tabular}{ l c r }
+        Landau-Lifschitz-Gilbert & $\Longrightarrow$ & LLG \\
+        Ferromagnetic resonance & $\Longrightarrow$ & FMR \\
+    \end{tabular}
+\end{table}
+
+\bibliographystyle{ieeetr}
+\bibliography{Exchange_Magnons}
+
+\end{document}
