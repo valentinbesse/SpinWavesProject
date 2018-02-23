@@ -107,32 +107,65 @@ We write the magnetization vector as a Fourier series
     \label{eq7}
 \end{equation}
 where $\mathbf{M}_0$ is the steady states of the magnetization vector, $\mathbf{M}_n$ is the n-th order of the magnetization vector and $k_n$ is the wavevector of the n-th magnetic order.
-It is obvious that $\mathbf{M}_n \ll \mathbf{M}_0$.
+It implies that $\mathbf{M}_n \ll \mathbf{M}_0$.
 Substitutes Eq. \eqref{eq7} into the non-uniform part of Eq. \eqref{eq6} we obtain 
 \begin{equation}
     \mathbf{H}_{\mathrm{ex,NU}} =  D \frac{\partial^2 \mathbf{M}}{\partial x} = - D \sum_{n=0}^N k^2_n \mathbf{M}_n^2 \cos \left( k_n x\right).
     \label{eq8}
 \end{equation}
-
 The lossless Landau-Lifshitz-Gilbert equation is defined by
 \begin{equation}
     \frac{\partial \mathbf{M}}{\partial t} = - \gamma \mathbf{M} \times \mathbf{H}_{\mathrm{eff}}
     \label{eq9}
 \end{equation}
 with $\gamma$ is the gyromagnetic ratio.
-We consider only the contribution of the exchange interaction when the magnetization is non-uniform.
+It is obvious that since $\mathbf{H}_{\mathrm{ex,0}}$ depends on $\textbf{M}$ so it does not play a role $$\mathbf{M} \times \mathbf{H}_{\mathrm{ex,0}} =0.$$
 Adding Eq. \eqref{eq8} into Eq. \ref{eq9} we obtain
 \begin{equation}
-    \frac{\partial \mathbf{M}}{\partial t} = - \gamma D \mathbf{M} \times \frac{\partial^2 \mathbf{M}}{\partial x^2}
+    \frac{\partial \mathbf{M}}{\partial t} + \gamma D \left[ \mathbf{M} \times \frac{\partial^2 \mathbf{M}}{\partial x^2} \right] = 0
     \label{eq10}
 \end{equation}
-Let's consider that $\mathbf{M} \sim \exp \left( i \omega t \right)$ and that the exchange constant $D$ is modified by the propagation of a strain.
-It is easy to imagine that since the distance between two atoms change when a strain is propagating that the exchange interaction.
-It implies that $D \left(t,x\right)$.
+Let's consider that the time dependence of the magnetization vector is $$\mathbf{M} \left(t, \mathbf{r} \right) \sim \mathbf{M} \left( \mathbf{r} \right) \exp \left( i \omega t \right)$$ and that the exchange constant $D$ is modified by the propagation of a strain: the distance between two atoms changes.
+So the exchange coefficient depends on time and space.
+\begin{equation}
+    i \omega \mathbf{M} + \gamma D \left( t, z \right) \left[ \mathbf{M} \times \frac{\partial^2 \mathbf{M}}{\partial x^2} \right] = 0
+    \label{eq11}
+\end{equation}
+The Eq. \eqref{eq11} shows that the exchange interaction appears only in parametric terms.
+It means that this term cannot drive the magnons by itself if $\mathbf{M}_n \left( t = 0, \mathbf{r} \right) = \overrightarrow{0}$.
 
-
+Now, let's consider that the exchange coefficient is dependant on strain ($\epsilon$) propagation.
+We write
+\begin{equation}
+    D \left( t, z \right) \sim D_{0} \exp \left( -\frac{\Delta r}{R_{\mathrm{D}}} \right)
+    \label{eq12}
+\end{equation}
+where $D_0$ is the exchange coefficient equilibrium value at the equilibrium, $\Delta r$ is the distance between two neighbor electrons which depends on the strain and $R_{\mathrm{D}}$ is the typical length of the screening effect.
+The distance between two neighbor electrons change proportionally to the amplitude of the strain $$ \Delta r \sim r_0 \epsilon$$
+where $r_0$ is the distance between two neighbor electrons at the equilibrium.
+The Eq. \eqref{eq12} is
+\begin{equation}
+    D \left( t, z \right) \sim D_{0} \exp \left( -\frac{r_0 \epsilon}{R_{\mathrm{D}}} \right)
+    \label{eq13}
+\end{equation}
+We develop in Taylor series the Eq. \eqref{eq13}
+\begin{equation}
+    D \left( t, z \right) \sim () D_{0} \left( 1 + \frac{r_0}{R_{\mathrm{D}}} \epsilon \right).
+    \label{eq14}
+\end{equation}
+The typical length of the screening effect is in the range of the size of the lattice $r_0$.
+Consequence Eq. \eqref{eq14} is
+\begin{equation}
+    D \left( t, z \right) \sim D_{0} \left( 1 + \epsilon \right).
+    \label{eq15}
+\end{equation}
+So the first-order Taylor coefficient is in the order of the strain amplitude, so typically from $0.01 \%$ to $0.1\%$.
 
 \section{Conclusion}
+
+In conclusion, the exchange interaction cannot drive the magnons by itself.
+It is necessary to consider it along with the magnetoelastic effect or to use a non-zero initial value for magnetization vector.
+Also it appears that the Taylor expansion's first-order coefficient of the exchange interaction is in the range of the amplitude of the strain (from $0.01 \%$ to $0.1\%$).
 
 \newpage
 
