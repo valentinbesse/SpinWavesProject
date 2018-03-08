@@ -1,0 +1,13 @@
+Hi Vladimir,
+Please find the name of abstract's files and the description of which talk. I also added the talk I gave at our laboratory's seminar where there is no abstract required.
+
+With abstract:
+
+Besse_Exchange_Magnon_Interaction_in_Ferromagnetic_Thin_Films_GDR2017.pdf:
+V. Besse, A.V. Golov, V.S. Vlasov, A. Alekhin, V.V. Temnov, Exchange Magnon in Ferromagnetic Thin Films Exited by a Series of Acoustic Pulses, GDR Ultrafast Phenomena, 9-10 novembre, Paris, France (2017).
+
+Besse_Phonon-Magnon_Interaction_in_Ferromagnetic_Thin_Films_MaCMat2017.pdf:
+V. Besse, A.V. Golov, V.S. Vlasov, A. Alekhin, L.N. Kotov, V.V. Temnov, Phonon-Magnon Interactions in Ferromagnetic Thin Films, invited talk, Magnetic Coupling in Nanostructured Materials 2017, 23-24 octobre, Rome, Italie (2017)
+
+Without abstract:
+V. Besse, A.V. Golov, V.S. Vlasov, A. Alekhin, V.V. Temnov, Phonon-Magnon Interactions in Ni Thin Films Exited by a Series of Acoustic Pulses, contribution invitée, Séminaire PSC, IMMM, Le Mans Université, 21 décembre 2017.
