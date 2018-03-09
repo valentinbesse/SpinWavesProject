@@ -34,6 +34,11 @@ prl,
 \setcounter{footnote}{0}
 %\usepackage[style=base]{caption}
 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 \graphicspath{ {./Figures/} }
 
 \begin{document}
@@ -126,13 +131,39 @@ where \textit{n} is the magnon mode number, \textit{L} is the thickness of ferro
 	\label{eq:Boundary_cond}
 \end{equation}
 Acoustic pulses propagate through a ferromagnetic film and alter the direction of the effective magnetic field thereby driving precessional motion of the magnetization. The effect on the induced magnetization dynamics induced is measured by monitoring the Kerr rotation angle at opposite side of ferromagnetic film.
+
+Table \ref{tab:StrainAmplitudeVSPrecessioAngle} shows the precession angle ($\theta'$) variation as a function of the strain amplitude ($\left| \epsilon_{zz} \right|$).
+We consider the excitation induced by only one acoustic pulses while the external magnetic field's magnitude is set to $6.45\ T$.
+It appears that for a strain's amplitude smaller than $1\ \%$, the precession angle evolve linearly.
+We fix the strain amplitude to $0.5\ \%$.
+\begin{table}[b]
+    \centering
+    %\begin{tabular}{p{4cm} p{4cm} p{4cm} p{4cm}}
+    \begin{tabular}{C{4cm} C{4cm} C{4cm} C{4cm}}
+        \hline
+        \hline
+        %Strain amplitude & Average precession angle (degree) & Standard deviation (degree)  & Maximal value of the precession angle \\
+        $\left| \epsilon_{zz} \right|$ (\%) & $<\theta'>$ (degree) & $\sigma$ & $\theta'_{\mathrm{max}}$ \\
+        \hline
+        $0.1$ & $1.35 \times 10^{-3}$ & $1.19 \times 10^{-3}$ & $5.83 \times 10^{-3}$ \\
+        $0.5$ & $3.38 \times 10^{-2}$ & $3 \times 10^{-2}$ & $1.51 \times 10^{-1}$ \\
+        $1$ & $1.36 \times 10^{-1}$ & $1.21 \times 10^{-1}$ & $6.37 \times 10^{-1}$ \\
+        $3$ & $1.22$ & $1.14$ & $7.16$ \\
+        \hline
+        \hline
+    \end{tabular}
+    \caption{Influence of the strain amplitude ($\left| \epsilon_{zz} \right|$) on the precession angle ($\theta'$). We report also the standard deviation ($\sigma$) and the maximal value reach by the precession angle ($\theta'_{\mathrm{max}}$)}
+    \label{tab:StrainAmplitudeVSPrecessioAngle}
+\end{table}
+
+
 	
 The behavior of the magnetization vector can be estimated through the characteristics of the dispersion curves of acoustic and spinwaves branches. By playing with the magnetic field we can tune the spinwave dispersion curve. So we can choose the magnitude of the field in such a way that there is none, only one or two intersection points between acoustic and spinwave dispersion curves. For the case of one intersection point phase velocity of magnons and acoustic pulses will be equal. In this case the most suitable frequency is close to 500 GHz. It corresponds to a delay of 2 ps between the acoustic pulses.
 	
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.95\columnwidth]{Figures/dispersionRelation-H6.5T-Ni30nm-3.57_2ps.eps}
-	\caption{Acoustic dispersion relation curve (black line) and magnon dispersion relation curve for $H = 6.5\ \mathrm{T}$ (blue dashed line). The left figure corresponds to the spectrum of the acoustic excitation. The frequencies of acoustic pulses is 280.1 GHz.}
+	\caption{Acoustic dispersion relation curve (black line) and magnon dispersion relation curve for $H = 6.5\ \mathrm{T}$ (blue dashed line). The left figure corresponds to the spectrum of the magnetization as a function of the frequency (THz) while the bottom figure corresponds to same spectrum but as a function of the wavevector ($10^{-1}\, \mathrm{nm}^{-1}$). The blue, red and yellow curves corresponds to the magnetization resulting from an excitation due to a serie of, respictively, one, two and four acoustic pulses. The frequencies of acoustic pulses repetition rate is 280.1 GHz.}
 	\label{fig:dispersionRelationHNi}
 \end{figure}
 	
