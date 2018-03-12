@@ -5,6 +5,14 @@
 \usepackage{amsmath}
 \usepackage{textcomp}
 \usepackage{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{multirow}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{document}
 
@@ -96,4 +104,35 @@ First, we consider that $\alpha = 0$, so we can rewrite \ref{eq:LLG-1}:
     \label{eq:LLG-2}
 \end{equation}
 %\bibliography{bib_ExchangeMagnons.bib}
+
+\section{Strain dependence of exchange field}
+
+\section{Parameters used in the simulation}
+
+The relevant parameters are given in Table \ref{table:parameters}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{C{3cm}|C{5cm}|C{4cm}}
+    \hline
+    \hline
+    Group & Parameter & Value \\
+    \hline
+    \multirow{6}{*}{Nickel} & Thickness & $30\ \mathrm{nm}$\\
+    & H-field & $484.1 \times 10^{3}\ \mathrm{A}/\mathrm{m}$\\
+    & Sound velocity $c_{\mathrm{s}}$ & $5.6\times 10^3\ \mathrm{m}/\mathrm{s}$\\
+    & Exchange constant $D$ & $430\ \mathrm{meV.A}^2$\\
+    & Magnetoelastic constant $b_1$ & $1\times 10^7$\\
+    & Electron gyromagnetic ratio $\gamma$& $1.76 \times 10^{11}\ \mathrm{rad}/\mathrm{s.T}$\\
+    \hline
+    \multirow{3}{*}{Adjustable}& Magnetic field angle $\xi$ & $45\mathrm{\degree}$ \\
+    & Acoustic pulse duration & $1\ \mathrm{ps}$ \\
+    & Maximal propagation time & $400\ \mathrm{ps}$ \\
+    \hline
+    \hline
+    \end{tabular}
+    \caption{Parameter’s value used for the numerical simulation}
+    \label{table:parameters}
+\end{table}
+
 \end{document}
